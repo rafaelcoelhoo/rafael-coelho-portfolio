@@ -47,7 +47,7 @@ export function Hero() {
           <div className="overflow-hidden rounded-xl border-4 border-card bg-card shadow-xl">
             <Image
               src={asset(profile.photo) || '/placeholder.svg'}
-              alt={`Fotografia de ${profile.name}`}
+              alt=""
               width={600}
               height={720}
               priority

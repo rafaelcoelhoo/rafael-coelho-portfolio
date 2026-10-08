@@ -13,7 +13,7 @@ export function DemoSites() {
           <p className="flex items-start gap-3 rounded-xl bg-accent px-4 py-3 leading-relaxed text-accent-foreground">
             <Info className="mt-1 size-4 shrink-0" aria-hidden="true" />
             <span>
-              Estes negócios são fictícios. São sites de demonstração, criados para mostrar o tipo de trabalho que
+              Estes negócios são sites de demonstração, criados para mostrar o tipo de trabalho que
               posso fazer para si.
             </span>
           </p>
