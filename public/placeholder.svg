@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="750" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e8edf7"/>
+      <stop offset="1" stop-color="#f7eee0"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="390" y1="230" x2="810" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#526fb5"/>
+      <stop offset="1" stop-color="#263f7c"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1200v750H0z"/>
+  <path fill="#fff" fill-opacity=".88" d="M84 68h1032a20 20 0 0 1 20 20v574a20 20 0 0 1-20 20H84a20 20 0 0 1-20-20V88a20 20 0 0 1 20-20Z"/>
+  <path fill="#f1f3f7" d="M64 88a20 20 0 0 1 20-20h1032a20 20 0 0 1 20 20v48H64V88Z"/>
+  <circle cx="101" cy="102" r="9" fill="#d28b86"/>
+  <circle cx="132" cy="102" r="9" fill="#e1bd76"/>
+  <circle cx="163" cy="102" r="9" fill="#89ae91"/>
+  <rect x="390" y="230" width="420" height="420" rx="210" fill="url(#tile)"/>
+  <path d="M600 315v250m-125-125h250m-214-89 178 178m0-178L511 539" stroke="#fff" stroke-opacity=".8" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="600" cy="440" r="55" fill="#fff" fill-opacity=".92"/>
+  <circle cx="600" cy="440" r="20" fill="#526fb5"/>
+  <text x="600" y="610" fill="#263f7c" font-family="Arial,sans-serif" font-size="28" font-weight="600" text-anchor="middle">Pré-visualização do site</text>
+</svg>
