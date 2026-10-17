@@ -17,7 +17,7 @@ export const profile = {
   whatsappUrl: `https://wa.me/351961969601?text=${encodeURIComponent(whatsappMessage)}`,
   linkedinUrl: 'https://www.linkedin.com/in/rafael-coelho-446869110',
   // Substitua pela sua foto, ex: '/images/rafael.jpg' (guardada em /public/images)
-  photo: '/images/fotografia.jpeg?height=720&width=600',
+  photo: '/images/foto-perfil.jpeg?height=720&width=600',
 }
 
 export const brands = ['Ford', 'PUMA', 'Lindt', 'Nestlé']
@@ -31,7 +31,6 @@ export const credentials = [
 export type DemoSite = {
   name: string
   type: string
-  description: string
   url: string
   image: string
 }
@@ -40,18 +39,22 @@ export type DemoSite = {
 // Guarde os screenshots em /public/images e use, por exemplo, '/images/salao-silva.jpg'.
 export const demoSites: DemoSite[] = [
   {
-    name: 'Salão Silva',
-    type: 'Cabeleireiro',
-    description: 'Serviços, preços, horário e marcações rápidas por WhatsApp.',
-    url: '#',
-    image: '/placeholder.svg?height=750&width=1200',
+    name: 'Barbearia de Bairro',
+    type: 'Barbearia · Baixa de Lisboa',
+    url: 'https://barbearia-demonstracao.netlify.app/',
+    image: '/images/barbearia.png',
   },
   {
-    name: 'Clínica Ovar',
-    type: 'Clínica de saúde',
-    description: 'Especialidades, equipa, localização e contacto direto.',
-    url: '#',
-    image: '/placeholder.svg?height=750&width=1200',
+    name: 'Oficina Ferreira',
+    type: 'Oficina automóvel',
+    url: 'https://oficinaferreira.netlify.app/',
+    image: '/images/oficina2.png',
+  },
+  {
+    name: 'Doce Formula',
+    type: 'Pastelaria artesanal',
+    url: 'https://rafaelcoelhoo.github.io/joana-coelho/',
+    image: '/images/doceformula.png',
   },
 ]
 

@@ -13,13 +13,14 @@ export function DemoSites() {
           <p className="flex items-start gap-3 rounded-xl bg-accent px-4 py-3 leading-relaxed text-accent-foreground">
             <Info className="mt-1 size-4 shrink-0" aria-hidden="true" />
             <span>
-              Estes negócios são sites de demonstração, criados para mostrar o tipo de trabalho que
-              posso fazer para si.
+              {demoSites.length === 1
+                ? 'Este negócio é um site de demonstração, criado para mostrar o tipo de trabalho que posso fazer para si.'
+                : 'Estes negócios são sites de demonstração, criados para mostrar o tipo de trabalho que posso fazer para si.'}
             </span>
           </p>
         </div>
 
-        <ul className="grid gap-8 md:grid-cols-2">
+        <ul className={`grid gap-8 ${demoSites.length > 1 ? 'md:grid-cols-2' : 'max-w-3xl'}`}>
           {demoSites.map((site) => (
             <li key={site.name}>
               <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-lg focus-within:shadow-lg">
@@ -50,7 +51,6 @@ export function DemoSites() {
                       <span className="sr-only"> — ver site ao vivo (abre numa nova janela)</span>
                     </a>
                   </h3>
-                  <p className="leading-relaxed text-muted-foreground">{site.description}</p>
                   <p className="mt-auto flex items-center gap-1 pt-3 font-semibold text-primary" aria-hidden="true">
                     Ver site ao vivo
                     <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
