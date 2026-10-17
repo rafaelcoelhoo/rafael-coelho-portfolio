@@ -55,9 +55,6 @@ export function Hero() {
             />
           </div>
         </div>
-        <p className="absolute -bottom-4 left-4 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background shadow-lg md:left-auto md:right-6">
-          Ovar, cidade do azulejo
-        </p>
       </div>
     </header>
   )
