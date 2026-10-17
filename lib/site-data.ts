@@ -12,7 +12,7 @@ export const profile = {
   name: 'Rafael Coelho',
   role: 'Criação de Websites para Negócios Locais',
   location: 'Ovar, Aveiro',
-  email: 'rafaelcoelhoo77@gmail.com',
+  email: 'info@rafaelcoelho.pt',
   phoneDisplay: '961 969 601',
   whatsappUrl: `https://wa.me/351961969601?text=${encodeURIComponent(whatsappMessage)}`,
   linkedinUrl: 'https://www.linkedin.com/in/rafael-coelho-446869110',
