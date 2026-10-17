@@ -40,7 +40,7 @@ export type DemoSite = {
 export const demoSites: DemoSite[] = [
   {
     name: 'Barbearia de Bairro',
-    type: 'Barbearia · Baixa de Lisboa',
+    type: 'Barbearia',
     url: 'https://barbearia-demonstracao.netlify.app/',
     image: '/images/barbearia.png',
   },
@@ -50,11 +50,20 @@ export const demoSites: DemoSite[] = [
     url: 'https://oficinaferreira.netlify.app/',
     image: '/images/oficina2.png',
   },
+]
+
+export const clientSites: DemoSite[] = [
   {
     name: 'Doce Formula',
     type: 'Pastelaria artesanal',
     url: 'https://rafaelcoelhoo.github.io/joana-coelho/',
     image: '/images/doceformula.png',
+  },
+  {
+    name: 'Mapa de Preços da Habitação',
+    type: 'Imobiliário',
+    url: 'https://pia-baeza-analise-imobiliaria.netlify.app/',
+    image: '/images/mapa.png',
   },
 ]
 
