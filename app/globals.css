@@ -122,6 +122,10 @@
   body {
     @apply bg-background text-foreground;
   }
+  a:not(.inline-flex) {
+    text-decoration-line: underline;
+    text-underline-offset: 0.25em;
+  }
   html {
     scroll-behavior: smooth;
   }

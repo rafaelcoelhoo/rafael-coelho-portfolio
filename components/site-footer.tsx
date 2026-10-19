@@ -23,6 +23,11 @@ export function SiteFooter() {
               LinkedIn<span className="sr-only"> (abre numa nova janela)</span>
             </a>
           </li>
+          <li>
+            <a href="/privacidade" className="underline-offset-4 hover:underline">
+              Privacidade
+            </a>
+          </li>
         </ul>
       </div>
     </footer>
