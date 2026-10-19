@@ -136,6 +136,23 @@
   }
 }
 
+:where(a, button, input, textarea, select):focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border: 2px double white;
+}
+
+.whatsapp-cta:focus-visible {
+  outline-color: white;
+  border-color: black;
+}
+
+.group:has(a:focus-visible) {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border: 2px double white;
+}
+
 /* Azulejo tile motif, a nod to Ovar's tiled facades */
 @utility azulejo {
   background-color: var(--card);

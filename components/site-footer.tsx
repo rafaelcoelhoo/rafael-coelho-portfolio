@@ -28,6 +28,11 @@ export function SiteFooter() {
               Privacidade
             </a>
           </li>
+          <li>
+            <a href="/acessibilidade" className="underline-offset-4 hover:underline">
+              Acessibilidade
+            </a>
+          </li>
         </ul>
       </div>
     </footer>

@@ -17,7 +17,7 @@ export function Contact() {
 
         <div className="flex flex-col gap-3 sm:flex-row">
           <Button asChild size="lg" variant="secondary" className="h-12 px-6 text-base">
-            <a href={profile.whatsappUrl} target="_blank" rel="noopener noreferrer">
+            <a href={profile.whatsappUrl} target="_blank" rel="noopener noreferrer" className="whatsapp-cta">
               <MessageCircle className="size-5" aria-hidden="true" />
               Falar no WhatsApp
               <span className="sr-only">(abre numa nova janela)</span>

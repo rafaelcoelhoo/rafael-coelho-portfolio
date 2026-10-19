@@ -10,6 +10,9 @@ export default function PrivacyPage() {
     <>
       <main className="min-h-screen bg-background">
         <div className="mx-auto max-w-3xl px-5 py-16 md:px-8 md:py-24">
+          <a href="/" className="mb-6 inline-block font-medium text-primary">
+            ← Voltar à página inicial
+          </a>
           <h1 className="font-display text-4xl font-bold tracking-tight text-foreground md:text-5xl mb-8">
             Política de Privacidade
           </h1>

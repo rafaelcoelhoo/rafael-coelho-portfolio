@@ -37,7 +37,7 @@ export function ClientSites() {
                       href={site.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="after:absolute after:inset-0 focus-visible:outline-none after:rounded-2xl focus-visible:after:ring-2 focus-visible:after:ring-ring"
+                      className="after:absolute after:inset-0 after:rounded-2xl"
                     >
                       {site.name}
                       <span className="sr-only"> — ver site ao vivo (abre numa nova janela)</span>
