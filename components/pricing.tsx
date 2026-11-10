@@ -1,4 +1,4 @@
-import { Check, MessageCircle } from 'lucide-react'
+import { Check, ChevronDown, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { creationPlan, maintenancePlans, pricingFaq, whatsappLink, type PricingPlan } from '@/lib/site-data'
 
@@ -86,13 +86,29 @@ export function Pricing() {
           Novas secções ou páginas são sempre orçamentadas à parte, sem compromisso.
         </p>
 
-        <div className="flex flex-col gap-4 md:max-w-3xl">
-          <h3 className="font-display text-2xl font-bold text-foreground">Perguntas frequentes</h3>
-          <div className="flex flex-col divide-y divide-border rounded-2xl border border-border bg-card">
+        <div className="grid gap-8 md:grid-cols-[1fr_1.6fr] md:gap-16">
+          <div className="flex flex-col gap-3">
+            <h3 className="font-display text-2xl font-bold tracking-tight text-foreground md:text-3xl">
+              Perguntas frequentes
+            </h3>
+            <p className="leading-relaxed text-muted-foreground text-pretty">
+              Não encontra a sua resposta? Fale comigo, sem compromisso.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3">
             {pricingFaq.map((item) => (
-              <details key={item.q} className="group px-5 py-4">
-                <summary className="cursor-pointer font-semibold text-foreground">{item.q}</summary>
-                <p className="pt-3 leading-relaxed text-muted-foreground">{item.a}</p>
+              <details
+                key={item.q}
+                className="group rounded-xl border border-border bg-card shadow-sm transition-colors open:border-primary/40 open:shadow-md"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 rounded-xl px-5 py-4 font-semibold text-foreground marker:content-none hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring [&::-webkit-details-marker]:hidden">
+                  {item.q}
+                  <ChevronDown
+                    className="size-5 shrink-0 text-primary transition-transform duration-200 group-open:rotate-180 motion-reduce:transition-none"
+                    aria-hidden="true"
+                  />
+                </summary>
+                <p className="border-t border-border px-5 py-4 leading-relaxed text-muted-foreground">{item.a}</p>
               </details>
             ))}
           </div>
