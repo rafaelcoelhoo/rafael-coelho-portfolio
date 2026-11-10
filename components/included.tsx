@@ -29,7 +29,7 @@ export function Included() {
           </p>
           <div className="flex flex-col gap-1 rounded-xl border border-border bg-background p-5">
             <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground">Preço</p>
-            <p className="font-display text-2xl font-bold text-foreground">A partir de 150€ + IVA</p>
+            <p className="font-display text-2xl font-bold text-foreground">A partir de 249€ + IVA</p>
             <p className="text-sm leading-relaxed text-muted-foreground">
               Pague só quando aprovar.{' '}
               <a href="#precos" className="font-semibold text-primary">

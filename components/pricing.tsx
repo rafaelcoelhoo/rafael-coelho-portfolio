@@ -1,4 +1,4 @@
-import { Check, ChevronDown, MessageCircle } from 'lucide-react'
+import { Check, ChevronDown, MessageCircle, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { creationPlan, maintenancePlans, pricingFaq, whatsappLink, type PricingPlan } from '@/lib/site-data'
 
@@ -36,6 +36,19 @@ function PlanCard({ plan, headingLevel = 'h3' }: { plan: PricingPlan; headingLev
               <Check className="size-3" aria-hidden="true" />
             </span>
             {feature}
+          </li>
+        ))}
+        {plan.notIncluded?.map((item) => (
+          <li key={item} className="flex items-start gap-3 leading-relaxed opacity-70">
+            <span
+              className={`mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full border ${
+                highlighted ? 'border-primary-foreground' : 'border-muted-foreground'
+              }`}
+            >
+              <X className="size-3" aria-hidden="true" />
+            </span>
+            <span className="sr-only">Não inclui: </span>
+            {item}
           </li>
         ))}
       </ul>

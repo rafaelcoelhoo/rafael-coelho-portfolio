@@ -30,6 +30,7 @@ export type PricingPlan = {
   period: string
   description: string
   features: string[]
+  notIncluded?: string[]
   cta: string
   message: string
   highlighted?: boolean
@@ -37,7 +38,7 @@ export type PricingPlan = {
 
 export const creationPlan: PricingPlan = {
   name: 'Criação do site',
-  price: 'a partir de 150€',
+  price: 'a partir de 249€',
   period: '+ IVA, pagamento único',
   description: 'Tudo o que precisa para ter o seu negócio online, sem ter de tratar de nada.',
   features: [
@@ -48,7 +49,7 @@ export const creationPlan: PricingPlan = {
     'Pague só quando aprovar o resultado',
   ],
   cta: 'Pedir o meu site',
-  message: 'Olá Rafael, gostaria de saber mais sobre a criação de um site (a partir de 150€).',
+  message: 'Olá Rafael, gostaria de saber mais sobre a criação de um site (a partir de 249€).',
 }
 
 export const maintenancePlans: PricingPlan[] = [
@@ -60,8 +61,8 @@ export const maintenancePlans: PricingPlan[] = [
     features: [
       'Site sempre online (domínio, alojamento e certificado)',
       'Monitorização e correção de avarias',
-      'Sem alterações de textos e imagens',
     ],
+    notIncluded: ['Alterações de textos e imagens'],
     cta: 'Escolher manutenção base',
     message: 'Olá Rafael, tenho interesse na manutenção base (75€/ano).',
   },
