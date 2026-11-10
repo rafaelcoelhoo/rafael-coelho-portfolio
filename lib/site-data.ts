@@ -20,6 +20,98 @@ export const profile = {
   photo: '/images/foto-perfil.jpeg?height=720&width=600',
 }
 
+export function whatsappLink(message: string) {
+  return `https://wa.me/351910265723?text=${encodeURIComponent(message)}`
+}
+
+export type PricingPlan = {
+  name: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  cta: string
+  message: string
+  highlighted?: boolean
+}
+
+export const creationPlan: PricingPlan = {
+  name: 'Criação do site',
+  price: 'a partir de 150€',
+  period: '+ IVA, pagamento único',
+  description: 'Tudo o que precisa para ter o seu negócio online, sem ter de tratar de nada.',
+  features: [
+    'Site à medida do seu negócio',
+    'Alojamento incluído no 1.º ano',
+    'Domínio (o endereço, ex.: www.onegocio.pt) em seu nome',
+    'Alterações de textos e imagens durante o 1.º ano (até 1 por mês)',
+    'Pague só quando aprovar o resultado',
+  ],
+  cta: 'Pedir o meu site',
+  message: 'Olá Rafael, gostaria de saber mais sobre a criação de um site (a partir de 150€).',
+}
+
+export const maintenancePlans: PricingPlan[] = [
+  {
+    name: 'Manutenção base',
+    price: '75€',
+    period: '/ano + IVA',
+    description: 'Para quem não precisa de alterar o site com frequência.',
+    features: [
+      'Site sempre online (domínio, alojamento e certificado)',
+      'Monitorização e correção de avarias',
+      'Sem alterações de textos e imagens',
+    ],
+    cta: 'Escolher manutenção base',
+    message: 'Olá Rafael, tenho interesse na manutenção base (75€/ano).',
+  },
+  {
+    name: 'Manutenção com atualizações',
+    price: '120€',
+    period: '/ano + IVA',
+    description: 'Para manter o site sempre atual, sem se preocupar.',
+    features: [
+      'Tudo o que inclui a manutenção base',
+      'Atualização de textos e imagens, até 1 vez por mês',
+      'Resposta em cerca de 5 dias úteis',
+    ],
+    cta: 'Escolher com atualizações',
+    message: 'Olá Rafael, tenho interesse na manutenção com atualizações (120€/ano).',
+    highlighted: true,
+  },
+]
+
+export const pricingFaq = [
+/*   {
+    q: 'O domínio fica em meu nome?',
+    a: 'Sim. Registo o domínio com os seus dados como titular. Se quiser sair, entrego-lhe o código de transferência e os ficheiros do site.',
+  }, */
+  {
+    q: 'O que acontece se eu parar de pagar a manutenção?',
+    a: 'O site deixa de ficar online e o domínio deixa de ser renovado, podendo expirar e perder-se. Se quiser sair, peça-me antes o código de transferência do domínio e os ficheiros do site para os levar para outro sítio.',
+  },
+  {
+    q: 'O que conta como atualização?',
+    a: 'Trocar textos, preços, horários e imagens que já existem no site. As atualizações não acumulam de um mês para o outro.',
+  },
+  {
+    q: 'E se eu quiser uma nova secção ou página?',
+    a: 'Novas secções, páginas ou funcionalidades são sempre orçamentadas à parte, sem compromisso.',
+  },
+  {
+    q: 'Os preços incluem IVA?',
+    a: 'Não. Todos os preços acrescem IVA à taxa legal em vigor.',
+  },
+  {
+    q: 'Quanto tempo demora a fazer o site?',
+    a: 'Normalmente até 2 semanas, dependendo do que precisa. Combinamos o prazo exato antes de começar.',
+  },
+  {
+    q: 'E se eu não gostar do resultado?',
+    a: 'Só paga quando aprovar o site.',
+  },
+]
+
 export const brands = ['Ford', 'PUMA', 'Lindt', 'Nestlé']
 
 export const credentials = [
@@ -68,20 +160,20 @@ export const clientSites: DemoSite[] = [
 ]
 
 export const included = [
-  {
-    title: 'Site à medida do seu negócio',
-    text: 'Design pensado para a sua área, com as suas fotos, serviços e identidade.',
-  },
-  {
-    title: 'Perfeito no telemóvel',
-    text: 'A maioria dos seus clientes vai visitar o site pelo telemóvel. Fica rápido e fácil de usar.',
-  },
-  {
-    title: 'Fácil de encontrar e de contactar',
-    text: 'Otimização básica para o Google, mapa, horário e botão direto para WhatsApp e telefone.',
-  },
-  {
-    title: 'Acessível a todos',
-    text: 'Construído segundo as normas europeias de acessibilidade, para que ninguém fique de fora.',
-  },
+  'Funciona bem no telemóvel e no computador',
+  'Rápido e seguro (SSL)',
+  'Aparece no Google (otimização básica e Google Search Console)',
+  'Acessível a todos, segundo as normas europeias',
+  '1.º ano de alojamento e domínio incluídos',
+  'Suporte durante todo o desenvolvimento',
+]
+
+export const siteContents = [
+  'Abertura com as suas fotografias, o logótipo e a cor da marca',
+  'Sobre o negócio',
+  'Serviços e preços, tal como os escreve',
+  'Horário, morada e «Como chegar»',
+  'Botões para ligar, WhatsApp e email, e formulário de contacto se preferir',
+  'Galeria e perguntas frequentes',
+  'Rodapé legal com o Livro de Reclamações',
 ]

@@ -39,6 +39,9 @@ export function Hero() {
               <ArrowDown className="size-4" aria-hidden="true" />
             </a>
           </Button>
+          <Button asChild size="lg" variant="outline-static" className="h-12 bg-card px-6 text-base">
+            <a href="#precos">Ver preços</a>
+          </Button>
         </div>
       </div>
 

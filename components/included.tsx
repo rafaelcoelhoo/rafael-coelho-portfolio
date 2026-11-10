@@ -1,4 +1,20 @@
-import { included } from '@/lib/site-data'
+import { Check } from 'lucide-react'
+import { included, siteContents } from '@/lib/site-data'
+
+function CheckList({ items }: { items: string[] }) {
+  return (
+    <ul className="flex flex-col gap-3">
+      {items.map((item) => (
+        <li key={item} className="flex items-start gap-3 leading-relaxed text-foreground">
+          <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
+            <Check className="size-3" aria-hidden="true" />
+          </span>
+          {item}
+        </li>
+      ))}
+    </ul>
+  )
+}
 
 export function Included() {
   return (
@@ -13,20 +29,29 @@ export function Included() {
           </p>
           <div className="flex flex-col gap-1 rounded-xl border border-border bg-background p-5">
             <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground">Preço</p>
-            <p className="font-display text-2xl font-bold text-foreground">Proposta personalizada</p>
-            <p className="text-sm leading-relaxed text-muted-foreground">Sem compromisso, ajustada ao que precisa.</p>
+            <p className="font-display text-2xl font-bold text-foreground">A partir de 150€ + IVA</p>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Pague só quando aprovar.{' '}
+              <a href="#precos" className="font-semibold text-primary">
+                Ver preços
+              </a>
+            </p>
           </div>
         </div>
 
-        <ul className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2">
-          {included.map((item) => (
-            <li key={item.title} className="flex flex-col gap-2 bg-card p-6">
-              <span className="azulejo-mini size-8 rounded-md" aria-hidden="true" />
-              <h3 className="pt-2 font-display text-lg font-bold text-foreground">{item.title}</h3>
-              <p className="leading-relaxed text-muted-foreground">{item.text}</p>
-            </li>
-          ))}
-        </ul>
+        <div className="grid gap-8 sm:grid-cols-2">
+          <div className="flex flex-col gap-4">
+            <h3 className="font-display text-lg font-bold text-foreground">Todos os sites incluem</h3>
+            <CheckList items={included} />
+          </div>
+          <div className="flex flex-col gap-4">
+            <h3 className="font-display text-lg font-bold text-foreground">O que o seu site tem</h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Um site de página única com estas secções. Você fornece as fotos, o logótipo e os textos.
+            </p>
+            <CheckList items={siteContents} />
+          </div>
+        </div>
       </div>
     </section>
   )
